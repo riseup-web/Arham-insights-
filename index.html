@@ -3,167 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arham Insights | Step-by-Step Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Arham Insights | Sikhein aur Kamaein</title>
+    <meta name="description" content="Arham Insights par ghar baithe earning shuru karne ka pura tarika samjhein.">
+    <meta property="og:title" content="Arham Insights - Official Guide">
+    <meta property="og:description" content="Pehle ye video dekhein phir register karein. 100% Real Work.">
+    <meta property="og:image" content="https://i.ibb.co/ccP7XzY/Arham-Logo.png"> 
+    <meta property="og:url" content="https://arhaminsightses.netlify.app">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary: #38bdf8;
+            --secondary: #2563eb;
+            --dark: #0f172a;
+            --light-dark: #1e293b;
+            --text-gray: #94a3b8;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
             font-family: 'Poppins', sans-serif;
-            background: #0b0f19; /* Sleek dark background */
+            background-color: var(--dark);
             color: #ffffff;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        .container {
-            max-width: 850px;
-            width: 95%;
-            padding: 50px 15px;
+        /* Navbar Style */
+        nav {
+            padding: 20px;
             text-align: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
         }
+        .nav-logo { width: 150px; }
 
-        /* Logo Area */
-        .logo-box {
-            margin-bottom: 30px;
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
         }
-        .logo {
-            width: 180px;
-            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
-        }
-
-        /* Headline Styling */
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 700;
         }
+        .hero p { color: var(--text-gray); font-size: 1.2rem; margin-bottom: 40px; }
 
-        .sub-text {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Video Wrapper - Premium Look */
-        .video-wrapper {
+        /* Video Section */
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto 50px auto;
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
-            height: 0;
+            padding-bottom: 56.25%;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-            border: 1px solid #1e293b;
-            margin-bottom: 45px;
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.2);
+            border: 2px solid var(--light-dark);
+        }
+        .video-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
         }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        /* Steps Section */
+        .steps { padding: 80px 20px; background: var(--light-dark); }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 50px; color: var(--primary); }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .step-card {
+            background: var(--dark);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+        .step-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .step-num { 
+            font-size: 2.5rem; font-weight: 700; color: rgba(56, 189, 248, 0.2); 
+            margin-bottom: -20px; display: block;
         }
 
-        /* Professional CTA Button */
-        .cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
-            color: #fff;
-            padding: 20px 50px;
-            font-size: 1.3rem;
+        /* FAQ Section */
+        .faq { padding: 80px 20px; max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #1e293b; margin-bottom: 15px; padding: 20px; border-radius: 10px; text-align: left; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+
+        /* Final CTA */
+        .cta-section { padding: 100px 20px; text-align: center; }
+        .main-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 22px 60px;
+            font-size: 1.4rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 15px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+            transition: 0.3s;
+            display: inline-block;
         }
+        .main-btn:hover { transform: scale(1.05); box-shadow: 0 15px 40px rgba(37, 99, 235, 0.6); }
 
-        .cta-btn:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 45px rgba(37, 99, 235, 0.5);
-            background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
-        }
+        footer { padding: 40px; text-align: center; border-top: 1px solid #334155; color: var(--text-gray); }
 
-        /* Trust Badges */
-        .features {
-            margin-top: 60px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-top: 1px solid #1e293b;
-            padding-top: 40px;
-        }
-
-        .feature-box {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .feature-box h3 {
-            color: #38bdf8;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .feature-box p {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
-            .cta-btn { width: 100%; padding: 18px 20px; font-size: 1.1rem; }
+            .main-btn { width: 100%; font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-box">
-            <img src="https://ibb.co/spSjT0FJ" alt="Arham Insights Logo" class="logo">
-        </div>
+    <nav>
+        <img src="https://i.ibb.co/spSjT0FJ/logo.png" alt="Arham Insights" class="nav-logo">
+    </nav>
 
-        <h1>Pehle Is Video Ko Pura Dekhein!</h1>
-        <p class="sub-text">Arham Insights par register karne aur paise kamane ka sahi tarika is video mein samjhaya gaya hai.</p>
-
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/wANA__i1Fj8?rel=0&showinfo=0" 
-                title="Arham Insights Guide" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe >
-        </div>
-
-        <a href="https://arhaminsightses.netlify.app" class="cta-btn">Ab Website Par Kaam Shuru Karein →</a>
-
-        <div class="features">
-            <div class="feature-box">
-                <h3>Zero Investment</h3>
-                <p>Ek bhi rupaye kharch kiye bina kaam shuru karein.</p>
+    <section class="hero">
+        <div class="container">
+            <h1>India Ka Apna Earning Platform</h1>
+            <p>Pehle niche di gayi video ko pura dekhein, fir kaam shuru karein.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wANA__i1Fj8?rel=0" allowfullscreen></iframe>
             </div>
-            <div class="feature-box">
-                <h3>Trusted Payouts</h3>
-                <p>Ads revenue se seedha aapke account mein payment.</p>
+            
+            <a href="#register" class="main-btn">Skip Video & Register Now</a>
+        </div>
+    </section>
+
+    <section class="steps">
+        <h2 class="section-title">Kaam Kaise Karein?</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <span class="step-num">01</span>
+                <h3>Register Karein</h3>
+                <p>Website par jaakar apni sahi details ke saath account banayein.</p>
             </div>
-            <div class="feature-box">
-                <h3>Made in India</h3>
-                <p>Bharat ke youth ke liye ek behtareen platform.</p>
+            <div class="step-card">
+                <span class="step-num">02</span>
+                <h3>Task Pura Karein</h3>
+                <p>Blog post ko 5 minute tak padhein aur knowledge lein.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">03</span>
+                <h3>Earning Collect Karein</h3>
+                <p>Scratch card se apna reward payein jo seedha wallet mein jayega.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="section-title">Aapke Sawal, Hamare Jawab</h2>
+        <div class="faq-item">
+            <h4>Kya ye bilkul free hai?</h4>
+            <p>Ji haan, Arham Insights par kaam karne ke liye aapko ek bhi paisa nahi dena padta.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Payment kab milti hai?</h4>
+            <p>Jaise hi ad companies humein pay karti hain, hum aapka paisa aapke diye gaye WhatsApp/Email par bhej dete hain.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="register">
+        <h2>Ab Samay Hai Earning Shuru Karne Ka!</h2>
+        <br><br>
+        <a href="https://arhaminsightses.netlify.app" class="main-btn">Go to Main Website →</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Arham Insights. All Rights Reserved. <br> Made for the Youth of India.</p>
+    </footer>
 
 </body>
 </html>
